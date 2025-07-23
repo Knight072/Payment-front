@@ -1,0 +1,15 @@
+/* Mobile-first (iPhone SE 320px) */
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Tablets and up (>=768px) */
+@media (min-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

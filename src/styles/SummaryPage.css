@@ -1,0 +1,134 @@
+/* Mobile-first (iPhone SE 320px) */
+
+/* Backdrop que cubre todo */
+.summary-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* Card central */
+.summary-card {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+
+/* Título principal */
+.summary-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Secciones (pago, productos, entrega, totales) */
+.summary-section {
+  margin-bottom: 16px;
+}
+.summary-section--totals {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+.summary-section__header {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Filas genéricas */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.summary-row--mb {
+  margin-bottom: 12px;
+}
+.summary-row--bold {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Productos list */
+.summary-product {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.summary-product__info {
+  max-width: 70%;
+}
+.summary-product__desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 4px 0 0;
+}
+.summary-product__qty {
+  font-size: 0.95rem;
+  align-self: center;
+}
+
+/* Textos en sección entrega */
+.summary-text {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.summary-text--mb {
+  margin-bottom: 12px;
+}
+
+/* Botón flotante en esquina derecha */
+.summary-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.summary-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Responsive tablets and up */
+@media (min-width: 768px) {
+  .summary-backdrop {
+    padding: 24px;
+  }
+  .summary-card {
+    padding: 24px;
+  }
+  .summary-card__title {
+    font-size: 1.5rem;
+  }
+  .summary-section__header {
+    font-size: 1.1rem;
+  }
+  .summary-row {
+    font-size: 1rem;
+  }
+  .summary-button {
+    top: 24px;
+    right: 24px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,96 @@
+/* Mobile-first */
+
+/* Backdrop */
+.status-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+/* Card */
+.status-card {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 340px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+/* Title */
+.status-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Text lines */
+.status-text {
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.status-text--error {
+  color: red;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Loader */
+.status-page__loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Button */
+.status-button {
+  display: block;
+  margin: 16px auto 0;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.status-button:hover {
+  background: #5300d6;
+}
+
+.status-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .status-card {
+    padding: 24px;
+  }
+
+  .status-card__title {
+    font-size: 1.5rem;
+  }
+
+  .status-text {
+    font-size: 1.05rem;
+  }
+
+  .status-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
