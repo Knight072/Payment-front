@@ -34,7 +34,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_PEBBLE_02FF72E0F }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
-          app_location: "/src"           # raíz del proyecto
+          app_location: "/"           # raíz del proyecto
           api_location: ""            # sin API
           output_location: "dist"     # ← Vite genera dist (cámbialo si usas build)
   # -------------------------------------------------------------
