@@ -10,11 +10,18 @@ export default defineConfig({
       config: './tamagui.config.ts',
       components: ['tamagui'],
       optimize: true,
-      reactNative: false      // 👈 evita el alias a preact/compat
+      reactNative: false,
+      aliasReact: false,
     }),
   ],
   resolve: {
     alias: {
+      // 👇 Pega las rutas reales de tus node_modules
+      react: path.resolve(__dirname, 'node_modules/react'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      // por si acaso…
+      'react/jsx-runtime': 'react/jsx-runtime',
+      'react/jsx-dev-runtime': 'react/jsx-dev-runtime',
       '@': '/src',
     },
   },
